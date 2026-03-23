@@ -3,7 +3,7 @@
 set -ouex pipefail
 
 ### Copy sysfiles
-cp -rv /ctx/sysfiles/* /
+# cp -rv /ctx/sysfiles/* /
 
 ### Install packages
 
