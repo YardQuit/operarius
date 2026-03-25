@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '07 04 * * *
+    - cron: '07 04 * * *'
   push:
     branches:
       - main
