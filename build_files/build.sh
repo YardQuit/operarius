@@ -32,9 +32,18 @@ dnf5 -y copr disable pennbauman/ports
 # Clean
 dnf5 clean all
 
+### Change default firewalld zone
+cp /etc/firewalld/firewalld-workstation.conf /etc/firewalld/firewalld-workstation.conf.bak
+firewall-cmd --set-default-zone=FedoraWorkstation
+firewall-cmd --permanent --zone=FedoraWorkstation --add-service=ssh
+firewall-cmd --permanent --zone=FedoraWorkstation --add-service=rdp
+firewall-cmd --reload
+
 #### System Unit File
 systemctl enable tuned.service
 systemctl enable podman.socket
 systemctl enable fstrim.timer
 systemctl enable tailscaled.service
+systemctl enable sshd.service
 
+ 
