@@ -40,7 +40,7 @@ systemctl enable tailscaled.service
 systemctl enable sshd.service
 systemctl enable firewalld.service
  
-### Change default firewalld zone
+### Firewalld configuration 
 cp /etc/firewalld/firewalld-workstation.conf /etc/firewalld/firewalld-workstation.conf.bak
 firewall-offline-cmd --zone=FedoraWorkstation --add-service=ssh
 firewall-offline-cmd --zone=FedoraWorkstation --add-service=rdp
