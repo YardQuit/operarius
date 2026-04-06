@@ -42,6 +42,6 @@ systemctl enable firewalld.service
  
 ### Change default firewalld zone
 cp /etc/firewalld/firewalld-workstation.conf /etc/firewalld/firewalld-workstation.conf.bak
-firewall-offline-cmd --permanent --zone=FedoraWorkstation --add-service=ssh
-firewall-offline-cmd --permanent --zone=FedoraWorkstation --add-service=rdp
+firewall-offline-cmd --zone=FedoraWorkstation --add-service=ssh
+firewall-offline-cmd --zone=FedoraWorkstation --add-service=rdp
 
