@@ -49,6 +49,7 @@ gstreamer1-plugins-bad-free
 gstreamer1-plugins-good
 gstreamer1-plugins-good-gtk
 gstreamer1-plugins-ugly-free
+guile30
 helix
 inxi
 jetbrains-mono-fonts-all
