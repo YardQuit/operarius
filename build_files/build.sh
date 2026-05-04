@@ -31,7 +31,7 @@ dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release
 # Install from copr repositories
 dnf5 -y install starship
 dnf5 -y install lf
-dnf5 -y akmod-nvidia
+dnf5 -y install akmod-nvidia
 
 # dnf5 -y install cuda-drivers
 
