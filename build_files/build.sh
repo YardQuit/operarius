@@ -18,17 +18,14 @@ set -ouex pipefail
 dnf5 install --skip-unavailable -y $(cat /ctx/rpm_packages)
 
 # Enable copr repositories
-dnf5 -y config-manager addrepo --from-repofile=https://developer.download.nvidia.com/compute/cuda/repos/${distro}/${arch}/cuda-${distro}.repo
 dnf5 -y copr enable atim/starship
 dnf5 -y copr enable pennbauman/ports
 
 # Install from copr repositories
-dnf5 -y install cuda-drivers
 dnf5 -y install starship
 dnf5 -y install lf
 
 # Disable copr repositories
-rm -rf /etc/yum.repos.d/*cuda-*.repo
 dnf5 -y copr disable atim/starship
 dnf5 -y copr disable pennbauman/ports
 
