@@ -145,3 +145,5 @@ gnome-rdp
 maildir-utils
 isync
 just
+kernel-devel-matched
+kernel-headers
