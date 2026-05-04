@@ -20,34 +20,17 @@ dnf5 install --skip-unavailable -y $(cat /ctx/rpm_packages)
 # Enable copr repositories
 dnf5 -y copr enable atim/starship
 dnf5 -y copr enable pennbauman/ports
-
-# dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
 dnf5 -y config-manager addrepo --from-repofile=https://developer.download.nvidia.com/compute/cuda/repos/${distro}/${arch}/cuda-${distro}.repo
 
-# Enable copr repositories
-# dnf5 -y copr enable atim/starship
-# dnf5 -y copr enable pennbauman/ports
- 
 # Install from copr repositories
 dnf5 -y install starship
 dnf5 -y install lf
-# dnf5 -y install akmod-nvidia
-
 dnf5 -y install cuda-drivers
 
 # Disable copr repositories
 dnf5 -y copr disable atim/starship
 dnf5 -y copr disable pennbauman/ports
-
-
-# Install from copr repositories
-# dnf5 -y install starship
-# dnf5 -y install lf
-
-# Disable copr repositories
-# dnf5 -y copr disable atim/starship
-# dnf5 -y copr disable pennbauman/ports
+rm -rf /etc/yum.repos.d/*cuda-*.repo
 
 # Clean
 dnf5 clean all
