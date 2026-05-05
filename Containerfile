@@ -35,7 +35,11 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/build.sh
-    
+
+RUN cat <<EOF >> /usr/lib/bootc/kargs.d/01-plymouth_splash.toml
+kargs = ["splash"]
+EOF
+
 ### LINTING
 ## Verify final image and contents are correct.
 RUN bootc container lint
