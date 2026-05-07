@@ -27,11 +27,11 @@ dnf5 -y install \
 # Install from copr repositories
 dnf5 -y install starship
 dnf5 -y install lf
-dnf5 -y install akmod-nvidia xorg-x11-drv-nvidia-cuda
+sudoif dnf5 -y install akmod-nvidia xorg-x11-drv-nvidia-cuda
 
 # Compile kernel module
-akmods --force
-dracut --force
+sudoif akmods --force
+sudoif dracut --force
 modinfo -F version nvidia
 
 # Disable copr repositories
