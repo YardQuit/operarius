@@ -20,10 +20,19 @@ dnf5 install --skip-unavailable -y $(cat /ctx/rpm_packages)
 # Enable copr repositories
 dnf5 -y copr enable atim/starship
 dnf5 -y copr enable pennbauman/ports
+dnf5 -y install \
+     https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+     https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Install from copr repositories
 dnf5 -y install starship
 dnf5 -y install lf
+dnf5 -y install akmod-nvidia xorg-x11-drv-nvidia-cuda
+
+# Compile kernel module
+akmods --force
+dracut --force
+modinfo -F version nvidia
 
 # Disable copr repositories
 dnf5 -y copr disable atim/starship
