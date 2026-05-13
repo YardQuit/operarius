@@ -147,3 +147,7 @@ isync
 just
 kernel-devel-matched
 kernel-headers
+texlive-adjmulticol
+texlive-multicolrule
+texlive-mhequ
+texlive-multicap
