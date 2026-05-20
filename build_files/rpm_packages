@@ -129,3 +129,4 @@ kernel-devel-matched
 kernel-headers
 ipcalc
 tcpdump
+pandoc
