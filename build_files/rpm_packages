@@ -127,3 +127,5 @@ isync
 just
 kernel-devel-matched
 kernel-headers
+ipcalc
+tcpdump
