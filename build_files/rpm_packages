@@ -21,6 +21,7 @@ cronie-anacron
 dislocker
 distrobox
 emacs
+enchant
 evince
 evince-previewer
 fastfetch
@@ -53,6 +54,8 @@ gstreamer1-plugins-good-gtk
 gstreamer1-plugins-ugly-free
 guile30
 helix
+hunspell-sv
+hunspell-en-US
 inxi
 jetbrains-mono-fonts-all
 jq
