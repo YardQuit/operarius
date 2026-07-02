@@ -22,6 +22,7 @@ dislocker
 distrobox
 emacs
 enchant
+enchant2-devel
 evince
 evince-previewer
 fastfetch
@@ -87,6 +88,7 @@ pipewire-alsa
 pipewire-gstreamer
 pipewire-pulseaudio
 pipewire-utils
+pkgconf-pkg-config
 rpi-imager
 rpm-build
 rpm-devel
